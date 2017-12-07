@@ -1,0 +1,443 @@
+/* BOOTSTRAP 4 */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+/* FONT AWESOME */
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+/* FONT MIXIN */
+@import "http://fonts.googleapis.com/earlyaccess/notosanssc.css";
+@mixin font-Roboto-Light{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+@mixin font-Roboto-Regular{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+@mixin font-Roboto-Medium{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+@mixin font-Roboto-Bold{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+@mixin font-Notosans-Regular-Sc{
+    font-family: 'Noto Sans SC';
+    font-weight: 400;
+}
+@mixin font-Notosans-Medium-Sc{
+    font-family: 'Noto Sans SC';
+    font-weight: 500;
+}
+@mixin font-Notosans-Bold-Sc{
+    font-family: 'Noto Sans SC';
+    font-weight: 700;
+}
+/* GLOBAL CSS */
+body{
+    background-color: #e4e7ea;
+    @include font-Roboto-Regular;
+    line-height: 100%;
+    position: relative;
+}
+.container{
+    @media (min-width: 1365px){
+        width: 1335px;
+    }
+}
+/* HEADER */
+.fixed-top{
+    &.sticky-header{
+        .middle-header{
+            display: none;
+        }
+    }
+}
+.top-header{
+    background-color: #6738f4;
+    h3{
+        color: #ffffff;
+        font-size: 22px;
+        @include font-Roboto-Light;
+        line-height: 1;
+        margin-bottom: 0;
+        padding-bottom: 29px;
+        padding-top: 29px;
+        span{
+            font-size: 26px;
+            @include font-Roboto-Bold;
+        }
+    }
+}
+.middle-header{
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.main-menu{
+    background-color: #ffffff;
+    box-shadow: 1px 2px 3px rgba(224, 224, 224, .75);
+    ul{
+        display: table;
+        list-style: inside none;
+        margin-bottom: 0;
+        padding-left: 0;
+        width: 100%;
+        li{
+            float: left;
+            &:not(:last-child){
+                margin-right: 20px;
+                a{
+                    margin-right: 16px;
+                }
+            }
+            a{
+                color: #727480;
+                display: inline-block;
+                font-size: 14px;
+                @include font-Roboto-Bold;
+                line-height: 1;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                transition: color 0.3s ease-in-out 0s;
+                span{
+                    @include font-Notosans-Bold-Sc;
+                }
+                &:hover,
+                &:focus{
+                    color: #0084ff;
+                    text-decoration: none;
+                }
+                &.active{
+                    color: #0084ff;
+                }
+            }
+        }
+    }
+}
+/*  MAIN MENU */
+main{
+    padding-top: 248.5px;
+    .survey{
+        padding-top: 50px;
+        .survey-wrapper{
+            background-color: #ffffff;
+            border-top: 5px solid #0084ff;
+            margin-bottom: 40px;
+            .survey-header{
+                border-bottom: 1px solid #e4e7ea;
+                color: #2b2b2b;
+                font-size: 24px;
+                @include font-Roboto-Regular;
+                line-height: 1;
+                padding-bottom: 25px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 25px;
+                @include media-breakpoint-up(md){
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+                span{
+                    @include font-Notosans-Regular-Sc;
+                    font-size: 22px;
+                }
+                &.survey-header-bg{
+                    background-color: #0084ff;
+                    border-bottom-color: #0084ff;
+                    color: #ffffff;
+                }
+            }
+            .survey-body{
+                padding-bottom: 35px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 28px;
+                @include media-breakpoint-up(md){
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+                p{
+                    color: #2b2b2b;
+                    font-size: 18px;
+                    @include font-Roboto-Regular;
+                    line-height: 24px;
+                    margin-bottom: 0;
+                    & + p{
+                        margin-top: 22px;
+                    }
+                    span{
+                        display: block;
+                        &:last-child{
+                            @include font-Notosans-Regular-Sc;
+                        }
+                    }
+                    button{
+                        background-color: #21c434;
+                        background-image: linear-gradient(to top, #109b1d, #21c434);
+                        border: none;
+                        border-radius: 3px;
+                        color: #ffffff;
+                        font-size: 15px;
+                        @include font-Roboto-Bold;
+                        height: 40px;
+                        padding: 0;
+                        width: 168px;
+                    }
+                }
+                .form-control{
+                    border-color: #cccccc;
+                    border-style: solid;
+                    border-width: 2px;
+                    border-radius: 3px;
+                    color: #2b2b2b;
+                    font-size: 18px;
+                    @include font-Roboto-Regular;
+                    height: 40px;
+                    &:focus{
+                        border-color: #84f8fc;
+                        box-shadow: 0 0 3px #84f8fc;
+                    }
+                }
+                textarea{
+                    &.form-control{
+                        height: 240px;
+                    }
+                }
+                .list-unstyled{
+                    list-style: outside lower-alpha;
+                    margin-bottom: 0;
+                    padding-left: 20px;
+                    li{
+                        color: #2b2b2b;
+                        font-size: 18px;
+                        @include font-Roboto-Regular;
+                        line-height: 24px;
+                        & + li{
+                            margin-top: 15px;
+                        }
+                        span{
+                            display: block;
+                            &:last-child{
+                                @include font-Notosans-Regular-Sc;
+                            }
+                        }
+                    }
+                    &.numaric-number{
+                        list-style-type: decimal;
+                    }
+                }
+                .services-year{
+                    & + .services-year{
+                        margin-top: 20px;
+                    }
+                    .labeling{
+                        color: #2b2b2b;
+                        display: inline-block;
+                        font-size: 18px;
+                        @include font-Roboto-Regular;
+                        line-height: 1;
+                        width: 168px;
+                        span{
+                            @include font-Notosans-Regular-Sc;
+                        }
+                    }
+                    .list-inline{
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        vertical-align: top;
+                        li{
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 130px;
+                            .checkbox,
+                            .checkbox-info{
+                                display: inline-block;
+                            }
+                            .checkbox{
+                                margin-right: 6px;
+                                label{
+                                    background-attachment: scroll;
+                                    background-color: transparent;
+                                    background-image: none;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    border: 2px solid #0084ff;
+                                    border-radius: 2px;
+                                    cursor: pointer;
+                                    height: 18px;
+                                    width: 18px;
+                                }
+                                input{
+                                    &[type="radio"]{
+                                        display: none;
+                                    }
+                                    &:checked{
+                                        & + label{
+                                            background-image: url(../images/tick-mark-bg.png);
+                                            background-size: 18px 18px;
+                                            border-color: #3ed850;
+                                        }
+                                    }
+                                }
+                            }
+                            .checkbox-info{
+                                color: #2b2b2b;
+                                font-size: 18px;
+                                @include font-Roboto-Bold;
+                                span{
+                                    @include font-Notosans-Bold-Sc;
+                                }
+                            }
+                        }
+                    }
+                    &.survey-statement{
+                        .list-inline{
+                            li{
+                                width: 180px;
+                                &:first-child{
+                                    width: 250px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .table-responsive{
+                    .table{
+                        margin-bottom: 0;
+                        th{
+                            border: none;
+                            color: #2b2b2b;
+                            font-size: 18px;
+                            @include font-Roboto-Bold;
+                            line-height: 24px;
+                            padding: 20px 15px;
+                            white-space: nowrap;
+                            span{
+                                display: block;
+                                &:last-child{
+                                    @include font-Notosans-Bold-Sc;
+                                }
+                            }
+                        }
+                        td{
+                            border-top: none;
+                            color: #2b2b2b;
+                            font-size: 18px;
+                            @include font-Roboto-Regular;
+                            line-height: 24px;
+                            padding: 20px 15px;
+                            &:first-child{
+                                @include font-Roboto-Bold;
+                            }
+                            &:nth-child(2){
+                                span{
+                                    display: block;
+                                    &:last-child{
+                                        @include font-Notosans-Regular-Sc;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                .list-inline{
+                                    align-items: center;
+                                    display: flex;
+                                    flex: 0 0 100%;
+                                    flex-direction: row;
+                                    margin-bottom: 0;
+                                    max-width: 100%;
+                                    li{
+                                        align-items: center;
+                                        display: flex;
+                                        &:not(:last-child){
+                                            margin-right: 50px;
+                                        }
+                                        span{
+                                            align-items: center;
+                                            display: flex;
+                                        }
+                                        .checkbox{
+                                            margin-right: 12px;
+                                            label{
+                                                background-attachment: scroll;
+                                                background-color: transparent;
+                                                background-image: none;
+                                                background-position: center center;
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                border: 2px solid #0084ff;
+                                                border-radius: 2px;
+                                                cursor: pointer;
+                                                height: 18px;
+                                                margin-bottom: 0;
+                                                width: 18px;
+                                            }
+                                            input{
+                                                &[type="radio"]{
+                                                    display: none;
+                                                }
+                                                &:checked{
+                                                    & + label{
+                                                        background-image: url(../images/tick-mark-bg.png);
+                                                        background-size: 18px 18px;
+                                                        border-color: #3ed850;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .checkbox-info{
+                                            @include font-Roboto-Bold;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.factors-rank{
+                            border: 3px solid #ebebeb;
+                            th{
+                                background-color: #ebebeb;
+                            }
+                            td{
+                                border-color: #ebebeb;
+                                border-style: solid;
+                                border-width: 0 0 1px 1px;
+                                @include media-breakpoint-up(md){
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* FOOTER */
+footer{
+    p{
+        margin-bottom: 30px;
+        text-align: center;
+        span{
+            color: #2b2b2b;
+            display: block;
+            font-size: 14px;
+            @include font-Roboto-Regular;
+        }
+    }
+}
+label.radioerror{
+    color: #f90b0b;
+    display: none;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+label.error{
+    color: #f90b0b;
+    display: none;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
